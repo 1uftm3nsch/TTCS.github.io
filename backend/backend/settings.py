@@ -112,7 +112,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'IT_ROADMAP',  # Tên database MySQL
         'USER': 'root',        # Username MySQL
-        'PASSWORD': 'Thuy2004@',  # Mật khẩu MySQL
+        'PASSWORD': '12345',  # Mật khẩu MySQL
         'HOST': 'localhost',   # Nếu dùng máy chủ từ xa, nhập IP tại đây
         'PORT': '3306',        # Cổng mặc định của MySQL
         'OPTIONS': {

@@ -1,0 +1,438 @@
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close-btn:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.topic-creation-section,
+.topic-existing-section {
+  margin-bottom: 20px;
+}
+
+.topic-creation-section h4,
+.topic-existing-section h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #777;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control-us {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-control-us:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+textarea.form-control-us {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.character-count {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cancel-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.create-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.create-btn:hover {
+  background-color: #333;
+}
+
+.topic-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 30px 0;
+}
+
+.section-instruction {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.topic-table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.topic-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topic-table th,
+.topic-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.topic-table th {
+  background-color: #f7f7f7;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Roadmap list styles */
+.roadmap-list {
+  margin-top: 20px;
+}
+
+.roadmap-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.roadmap-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  /* position: relative; */
+}
+
+.roadmap-info {
+  flex: 1; /* Để roadmap-info chiếm hết không gian còn lại */
+}
+
+.roadmap-item:hover {
+  background-color: #f0f0f0;
+}
+
+.roadmap-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.roadmap-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.edit {
+  /* position: absolute; */
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #5a6268;
+}
+
+
+
+/* ===== EDIT ROADMAP STYLES ===== */
+.edit-roadmap-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edit-roadmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.edit-roadmap-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.save-changes-btn {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-changes-btn:hover {
+  background-color: #0052cc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.topics-section {
+  margin-top: 30px;
+}
+
+.topics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.topics-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.add-topic-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-topic-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.topic-list {
+  margin-top: 10px;
+}
+
+.topic-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.topic-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.topic-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.edit-topic-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-topic-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* No topics state */
+.no-topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.topic-icon {
+  font-size: 32px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.no-topics h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.no-topics p {
+  font-size: 14px;
+  color: #666;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .edit-roadmap-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .save-changes-btn {
+    width: 100%;
+  }
+  
+  .topics-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .add-topic-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
